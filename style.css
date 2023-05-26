@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(223, 215, 215);
+}
+img {
+  display: block;
+  object-fit: cover;
+  width: 120px;
+}
+
+#close {
+  color: red;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.links a {
+  padding-block: 1rem;
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  color: rgb(192, 187, 187);
+  padding-left: 1rem;
+  transition: 1s;
+}
+ul {
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+nav {
+  width: 25rem;
+  min-height: 100vh;
+  background: white;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  transform: translateX(-100%);
+  transition: 1s;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: rgba(174, 177, 39, 0.918);
+
+  font-size: 1.5rem;
+}
+.social-links {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.fab {
+  padding-inline: 0.5rem;
+}
+
+/**burger  */
+main {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.burger {
+  text-align: end;
+}
+#burger {
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  padding: 0rem;
+  margin: 2rem;
+  animation: clignote 5s infinite;
+}
+@keyframes clignote {
+  0% {
+    transform: scale(150%);
+  }
+
+  50% {
+    transform: scale(100%);
+  }
+
+  100% {
+    transform: scale(150%);
+  }
+}
+#burger a {
+  color: orangered;
+}
+/**hoover  animation*/
+.show-menu {
+  transform: translateY(0%);
+}
+#close:hover {
+  transform: rotate(180deg);
+}
+.links a:hover {
+  background: orange;
+
+  padding-left: 1.5rem;
+}
